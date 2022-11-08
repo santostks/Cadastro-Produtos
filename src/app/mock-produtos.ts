@@ -9,5 +9,7 @@ export const PRODUTOS: Produtos[] = [
   { id: 13, nome: 'RGB LED 30M', categoria: 'RGB', quantidade: 9, origem: 'China' },
   { id: 14, nome: 'GTX 1080 4GB', categoria: 'GPU', quantidade: 3, origem: 'Taiwan' },
   { id: 15, nome: 'GTX 2060 8GB', categoria: 'GPU', quantidade: 5, origem: 'Japan' },
-
+  { id: 16, nome: 'Fonte 650w Corsair', categoria: 'Fonte', quantidade: 5, origem: 'Japan' },
+  { id: 17, nome: 'Kingston 4GB', categoria: 'Memória', quantidade: 4, origem: 'Taiwan' },
+  { id: 18, nome: 'GTX 2060 4GB', categoria: 'GPU', quantidade: 5, origem: 'Japan' }
 ];

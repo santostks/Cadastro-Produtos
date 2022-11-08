@@ -1,15 +1,23 @@
+import { ProdutosService } from './../produtos.service';
 import { Component, OnInit } from '@angular/core';
+import { Produtos } from './../produtos';
 
-@Component({
-  selector: 'app-produtos',
-  templateUrl: './produtos.component.html',
-  styleUrls: ['./produtos.component.css']
-})
+
 export class ProdutosComponent implements OnInit {
+  selectedProdutos?: Produtos;
+  produtos: Produtos[] = [];
 
-  constructor() { }
+  constructor(private produtosService :ProdutosService) { }
 
   ngOnInit(): void {
+    this.getProdutos();
+  }
+  onSelect(produtos: Produtos): void {
+    this.selectedProdutos = produtos;
   }
 
+  getProdutos(): void {
+    this.produtosService.getProdutos()
+        .subscribe(produtos => this.produtos = produtos);
+  }
 }

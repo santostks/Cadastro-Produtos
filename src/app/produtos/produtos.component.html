@@ -1,1 +1,12 @@
-<p>produtos works!</p>
+<h2>Cadastro Produtos</h2>
+
+<ul class="produtos">
+  <li *ngFor="let produtos of produtos">
+    <button [class.selected]="produtos === selectedProdutos" type="button" (click)="onSelect(produtos)">
+      <span class="badge">{{produtos.id}}</span>
+      <span class="nome">{{produtos.nome}}</span>
+    </button>
+  </li>
+</ul>
+
+<produtos-detail [produtos]="selectedProdutos"></produtos-detail>
